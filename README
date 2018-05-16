@@ -1,0 +1,20 @@
+
+This repository contains the sets of scripts which monitors the spacecraft and the environment.
+
+
+Chandra_Ephemeris   --- update the Chandra ephemeris file, and a estimated ephemeris point
+KP_alert            --- Check the spacecraft configuration  and calculates the current KP limit
+Mirror_sties        --- contains MIRROR site version of Real Time Data Space Weather
+MSM                 --- Creating GSE/GSM 3D orbit plots
+Primary_filtering   --- extract OTG and CCDM related data from dump data (*Dump_EM_*)
+Rad_summ            --- Update MTA Radiation Environment Summary page
+Space_weather       --- space weather related scripts
+Stereo              --- Copying data and plots from NOAA STEREO site
+TST_ACE             --- monitor the ACE satellite proton fluxes for Chandra operations, plus the associated data files
+TST_CRM             --- The Chandra Radiation Model (CRM) from Sverdrup/MSFC
+TST_CRM2            --- The Chandra Radiation Model (CRM) from Sverdrup/MSFC
+TST_CRM3            --- The Chandra Radiation Model (CRM) from Sverdrup/MSFC
+TST_GOES            --- read data from noaa site and created GOES data file
+TST_scripts         --- CRMFLX_V23A_EXP.f related files
+TST_SOHO            --- predict and plot the solar wind environment for Chandra, 4 weeks into the future
+TST_TLE             --- process TLE ephemeris files for XMM and CXO

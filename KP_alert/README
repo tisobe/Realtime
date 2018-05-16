@@ -1,0 +1,51 @@
+Check the spacecraft configuration  and calculates the current KP limit,
+
+Dir: /data/mta4/space_weather/KPII/
+See also: https://cxc.cfa.harvard.edu/mta_days/mta_script_list/Realtime/bs_kp_alert.html
+
+NOTE: KP ALERT IS CURRENTLY IN STASIS.
+
+
+-------------------------------
+/data/mta4/space_weather/KPII/
+-------------------------------
+
+kpalert.pl                      --- the main control script to call all others
+                                    the web page is created by calculate_kp.csh, but
+                                    using that information crated by that, check the kp level
+                                    and send out alert email, if needed.
+    
+Input:
+    /proj/sot/acis/FLU-MON/FPHIST-2001.dat          --- sim file
+    /proj/sot/acis/FLU-MON/GRATHIST-2001.dat        --- otg file
+    /proj/rac/ops/ephem/gephem.dat                  --- geph file
+
+Output:
+    kp alert emal to "sot_yellow_alert@head.cfa.harvard.edu"               
+    all output from calculate_kp.csh
+
+
+calculate_kp.csh                --- extract kp data from:
+                                        ftp://ftp.swpc.noaa.gov/pub/lists/wingkp/wingkp_list.txt
+                                    and by calling process_kp.nawk, create kp.html page
+
+process_kp.nawk                 --- creates kp.html page. this reads the following static files:
+                                            kpheader
+                                            rob1
+                                            footer
+
+Input:
+    /data/mta4/space_weather/kpdata
+    ftp://ftp.swpc.noaa.gov/pub/lists/wingkp/wingkp_list.txt
+    http://legacy-www.swpc.noaa.gov/wingkp/wingkp_15m_7d.gif (just link to the plot)
+
+Output:
+    /data/mta4/space_weather/KPII/current_Kp.txt
+    /data/mta4/space_weather/kpdata
+
+    /data/mta4/www/kp.html (https://cxc.cfa.harvard.edu/mta/kp.html)
+
+
+cronjob (c3po-v/mta):
+
+7,22,37,52 * * * * /data/mta4/space_weather/KPII/kpalert.pl >> $HOME/Logs/kp.cron 

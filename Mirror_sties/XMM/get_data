@@ -1,0 +1,10 @@
+#! /usr/bin/env /bin/csh
+
+/bin/cp /stage/xmmops_ftp/radmon_02h.dat radmon_02h_curr.dat
+
+/data/mta/space_weather/XMM/crmreg_cxo
+/data/mta/space_weather/XMM/crmreg_xmm
+
+setenv IDL_PATH "/home/mta/IDL:"
+setenv IDL_DLM_PATH "/home/mta/IDL/CXFORM:<IDL_DEFAULT>"
+/usr/local/bin/idl update

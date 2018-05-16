@@ -1,0 +1,86 @@
+info           2016-01-19 09:31:24  ------------------------------------------------------------
+info           2016-01-19 09:31:24  Acorn Kernel Version 1.52
+info           2016-01-19 09:31:24  Command Line: /home/ascds/DS.release/bin/acorn -nOC otg-msids.list -f 2016_019_0438_019_1203_Dump_EM_30885 
+info           2016-01-19 09:31:24  Loading /home/ascds/DS.release/config/mta/data/cxcds_ipcl_translation.list
+info           2016-01-19 09:31:24  Loading Subsystem script otg-msids.list
+info           2016-01-19 09:31:25  Loading /home/ascds/DS.release/config/tp_template/P011//tmsrment.txt
+info           2016-01-19 09:31:25  Loading /home/ascds/DS.release/config/tp_template/P011//tloc.txt
+info           2016-01-19 09:31:26  Loading /home/ascds/DS.release/config/tp_template/P011//tsmpl.txt
+info           2016-01-19 09:31:26  Loading /home/ascds/DS.release/config/tp_template/P011//tsc.txt
+info           2016-01-19 09:31:26  Loading /home/ascds/DS.release/config/tp_template/P011//tcal_sw.txt
+info           2016-01-19 09:31:27  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt_sw.txt
+info           2016-01-19 09:31:27  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt.txt
+info           2016-01-19 09:31:27  Loading /home/ascds/DS.release/config/tp_template/P011//tes_sw.txt
+info           2016-01-19 09:31:27  Loading /home/ascds/DS.release/config/tp_template/P011//tes.txt
+info           2016-01-19 09:31:27  Loading /home/ascds/DS.release/config/tp_template/P011//tpc.txt
+info           2016-01-19 09:31:28  Loading /home/ascds/DS.release/config/tp_template/P011//tpp.txt
+info           2016-01-19 09:31:28  TraceLog started for PRIMARYOTG category.
+info           2016-01-19 09:31:28  TemplateMap initialized for Ipcl P011, Inst PI.
+info           2016-01-19 09:31:28  Found EHS header during first read of minor frame
+info           2016-01-19 09:31:52  Terminate Stripper.
+               2016-01-19 09:31:52   shut down.
+info           2016-01-19 09:31:55  ------------------------------------------------------------
+info           2016-01-19 09:31:56  Acorn Kernel Version 1.52
+info           2016-01-19 09:31:56  Command Line: /home/ascds/DS.release/bin/acorn -nOC msids.list -f 2016_019_0438_019_1203_Dump_EM_30885 
+info           2016-01-19 09:31:56  Loading /home/ascds/DS.release/config/mta/data/cxcds_ipcl_translation.list
+info           2016-01-19 09:31:56  Loading Subsystem script msids.list
+info           2016-01-19 09:31:57  Loading /home/ascds/DS.release/config/tp_template/P011//tmsrment.txt
+info           2016-01-19 09:31:57  Loading /home/ascds/DS.release/config/tp_template/P011//tloc.txt
+info           2016-01-19 09:31:57  Loading /home/ascds/DS.release/config/tp_template/P011//tsmpl.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tsc.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tcal_sw.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt_sw.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tes_sw.txt
+info           2016-01-19 09:31:58  Loading /home/ascds/DS.release/config/tp_template/P011//tes.txt
+info           2016-01-19 09:31:59  Loading /home/ascds/DS.release/config/tp_template/P011//tpc.txt
+info           2016-01-19 09:31:59  Loading /home/ascds/DS.release/config/tp_template/P011//tpp.txt
+info           2016-01-19 09:31:59  Trace placed on 5EP00016, counter for 5HSE202
+info           2016-01-19 09:31:59  Trace placed on 5EP00016, counter for 5EHSE106
+info           2016-01-19 09:31:59  Trace placed on 5EP00016, counter for 5EHSE300
+info           2016-01-19 09:31:59  Trace placed on 5EP00016, counter for 5EHSE100
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EHSE2
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00488
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00500
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00656
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00668
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00672
+info           2016-01-19 09:32:00  Trace placed on 5EP00016, counter for 5EP00688
+info           2016-01-19 09:32:01  Trace placed on 5EP00016, counter for 5EP00680
+info           2016-01-19 09:32:01  Trace placed on 5EP00016, counter for 5EP00692
+info           2016-01-19 09:32:01  Trace placed on 5EP00016, counter for 5EP00752
+info           2016-01-19 09:32:01  Trace placed on 5EP00016, counter for 5EP00764
+info           2016-01-19 09:32:01  TraceLog started for PRIMARYCCDM category.
+info           2016-01-19 09:32:01  TraceLog started for PRIMARYPCAD category.
+info           2016-01-19 09:32:02  TraceLog started for PRIMARYIRU category.
+info           2016-01-19 09:32:02  TraceLog started for PRIMARYEPHIN category.
+info           2016-01-19 09:32:02  TraceLog started for PRIMARYACIS category.
+info           2016-01-19 09:32:02  TraceLog started for PRIMARYACIS_STAT category.
+info           2016-01-19 09:32:02  TraceLog started for MUPSMUPS1 category.
+info           2016-01-19 09:32:02  TraceLog started for MUPSMUPS2 category.
+info           2016-01-19 09:32:02  TraceLog started for ELBILOW category.
+info           2016-01-19 09:32:03  TemplateMap initialized for Ipcl P011, Inst PI.
+info           2016-01-19 09:32:03  Found EHS header during first read of minor frame
+info           2016-01-19 09:32:42  Terminate Stripper.
+               2016-01-19 09:32:52   shut down.
+info           2016-01-19 09:32:54  ------------------------------------------------------------
+info           2016-01-19 09:32:54  Acorn Kernel Version 1.52
+info           2016-01-19 09:32:54  Command Line: /home/ascds/DS.release/bin/acorn -nOC msids_sim.list -f 2016_019_0438_019_1203_Dump_EM_30885 
+info           2016-01-19 09:32:54  Loading /home/ascds/DS.release/config/mta/data/cxcds_ipcl_translation.list
+info           2016-01-19 09:32:54  Loading Subsystem script msids_sim.list
+info           2016-01-19 09:32:54  Loading /home/ascds/DS.release/config/tp_template/P011//tmsrment.txt
+info           2016-01-19 09:32:54  Loading /home/ascds/DS.release/config/tp_template/P011//tloc.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tsmpl.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tsc.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tcal_sw.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt_sw.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tlmt.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tes_sw.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tes.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tpc.txt
+info           2016-01-19 09:32:55  Loading /home/ascds/DS.release/config/tp_template/P011//tpp.txt
+info           2016-01-19 09:32:55  TraceLog started for PRIMARYSIM category.
+info           2016-01-19 09:32:55  TemplateMap initialized for Ipcl P011, Inst PI.
+info           2016-01-19 09:32:55  Found EHS header during first read of minor frame
+info           2016-01-19 09:33:15  Terminate Stripper.
+               2016-01-19 09:33:15   shut down.

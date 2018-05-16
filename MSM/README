@@ -1,0 +1,30 @@
+################################
+Creating GSE/GSM 3D orbit plots
+################################
+
+Dir: /data/mta4/space_weather/MSM
+See also: https://cxc.cfa.harvard.edu/mta_days/mta_script_list/Realtime/bs_gsm_orbit.html
+
+gsm_plots.idl           --- controlling script, calling gsm_plots.pro
+gsm_plots.pro           --- main idl script to create GSEORBIT.gif and GSMORBIT.gif
+read_ephemeris.pro      --- collection of idl functions used by gsm_plots
+FluxImageColorKey.gif   --- color code list
+
+Note: this version runs only on rhodes
+
+Input:
+    /proj/rac/ops/ephem/PE.EPH.gsme
+
+Output:
+    /data/mta4/www/RADIATION/GSEORBIT.gif
+    /data/mta4/www/RADIATION/GSMORBIT.gif
+
+web page:
+    http://cxc.cfa.harvard.edu/mta/orbit.html (top two plots)
+
+
+cronjob:
+
+c3po-v/mta
+
+15 8,20 * * * cd /data/mta4/space_weather/MSM; /usr/local/bin/idl gsm_plots.idl > $HOME/Logs/plot_gsm.cron 

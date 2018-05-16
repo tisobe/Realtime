@@ -1,0 +1,42 @@
+
+##############################
+Radiation Environment Summary
+##############################
+
+Update MTA Radiation Environment Summary page: https://cxc.cfa.harvard.edu/mta/alerts/rad_summ.html
+
+Dir: /data/mta4/www/alerts
+See also: https://cxc.cfa.harvard.edu/mta_days/mta_script_list/Realtime/bs_rad_summ.html
+
++++++++++
+Scripts:
++++++++++
+
+run_rad_summ.pro            --- driving script calling others
+rad_summ.pro                --- the main script to update the html page
+
+/home/mta/IDL/date_conv.pro --- sub idl script to convert date
+/home/mta/IDL/juldate.pro   --- sub idl script to find julian date
+
++++++
+Data 
++++++
+
+/proj/sot/ska/data/arc/iFOT_events/grating/*.rdb
+/proj/sot/ska/data/arc/iFOT_events/sim/*.rdb
+/proj/sot/ska/data/arc/iFOT_events/radmon/*.rdb
+/proj/sot/ska/data/arc/iFOT_events/comm/*.rdb
+/proj/rac/ops/CRM3/CRMsummary.dat
+/pool14/chandra/chandra_psi.snapshot
+/proj/rac/ops/ACE/fluace.data.good
+/data/mta4/www/RADIATION/CRM3/crmplatt.gif
+./current.dat       
+
+Note:
+current.dat etc are copied from /proj/web-cxc-dmz/htdocs/acis/Fluence/current.dat (see  /data/mta4/www/copy_rac)
+
+
+cron job
+mta @ han-v
+
+2,12,22,32,42,52 * * * * cd /data/mta4/www/alerts ; /usr/local/bin/idl run_rad_summ > $HOME/Logs/rad_summ.cron 

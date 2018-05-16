@@ -1,0 +1,11 @@
+Robert Cameron
+March 2004
+
+1. dephem.pl is automatically run by cron to maintain 
+the longterm ephemeris file: dephem.dat
+
+2. manually run cocochan_de to convert dephem.dat to 
+dephem.gsme and dephem.gsme_in_Re (takes a few minutes to run)
+
+3. manually run dephem_quality_check.pl occasionally
+to verify the continuity of the timestamps in dephem.dat

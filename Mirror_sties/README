@@ -1,0 +1,86 @@
+
+###########################################
+Real Time Data Space Weather: MIRROR Site
+###########################################
+
+This site contains real time space weather data independent of 
+the main site.  Most data collections, reductions, and plotting 
+are done on colossus-v with a few help from r2d2-v. The main site 
+computation are done on c3po-v at /data/mta4/space_weather.
+
+++++++++++++++++++++++++++++++++++
+G13_dir/G13E_dir/G15_dir/ACE_dir:
+++++++++++++++++++++++++++++++++++
+
+Each directory contains:
+    *calc*.csh      ---- main scripts to download data, modify, and create web site.
+    *.nawk          ---- a script to extract data
+    *header etc     ---- parts needed for html creation
+
+input:
+G13:
+    ftp://ftp.sec.noaa.gov/pub/lists/particle/Gp_part_5m.txt
+    http://services.swpc.noaa.gov/images/satellite-env.gif
+    http://services.swpc.noaa.gov/images/goes-proton-flux.gif
+    http://services.swpc.noaa.gov/images/goes-xray-flux.gif
+
+G13E:
+    http://services.swpc.noaa.gov/text/goes-particle-flux-primary.txt
+    http://services.swpc.noaa.gov/images/goes-electron-flux.gif
+
+G15:
+    ftp://ftp.sec.noaa.gov/pub/lists/particle/Gs_part_5m.txt
+    http://services.swpc.noaa.gov/images/satellite-env.gif
+    http://services.swpc.noaa.gov/images/goes-proton-flux.gif
+    http://services.swpc.noaa.gov/images/goes-xray-flux.gif
+
+ACE/ACE_fast:
+    ftp://ftp.sec.noaa.gov/pub/lists/ace/ace_epam_5m.txt
+    http://services.swpc.noaa.gov/images/ace-epam-7-day.gif
+    http://services.swpc.noaa.gov/images/ace-mag-swepam-7-day.gif
+    http://services.swpc.noaa.gov/images/wing-kp-24-hour.gif
+
+output:
+In /data/mta_www/MIRROR/
+    G13.html        (plots: G13_plots/*gif)
+    G13E.html       (plots: G13E_plots/*gif)
+    G15.html        (plots: G15_plots/*gif)
+    ace.html        (plots: ACE_plots/*gif)
+    ace_i.html      (plots: ACE_plots/*gif)
+    ace_fast.hmtl   (plots: ACE_fast_plots/*gif)
+
+++++
+XMM
+++++
+see README file in the directory
+
+++++++++
+Outputs:
+++++++++
+
+Outputs are saved in /data/mta_www/MIRROR/ directory. For more
+details, please read /data/mta_www/MIRROR/README file.
+
+
++++++++++
+cron job:
++++++++++
+
+mta @ colossus-v
+
+3,8,13,18,23,28,33,38,43,48,53,58 * * * * cd /data/mta/space_weather/G13_dir/ ;      ./G13_calc.csh          > $HOME/Logs/goes13_linux.cron 
+5,10,15,20,25,30,35,40,45,50,55 * * * *   cd /data/mta/space_weather/G13E_dir/ ;     ./G13_Ecalc.csh         > $HOME/Logs/goes13e_linux.cron1
+4,9,14,19,24,29,34,39,44,49,54,59 * * * * cd /data/mta/space_weather/G15_dir/ ;      ./G15_calc.csh          > $HOME/Logs/goes15_linux.cron1
+2,7,12,17,22,27,32,37,42,47,52,57 * * * * cd /data/mta/space_weather/ACE_dir/ ;      ./calculate.csh         > $HOME/Logs/ace_bu.cron1
+0 * * * *                                 cd /data/mta/space_weather/ACE_fast_dir/ ; ./calculate_fast.csh    > $HOME/Logs/ace_fast_bu.cron1
+#0,10,20,30,40,50 * * * *                  cd /data/mta/space_weather/XMM ;           perl copy_cxo_data.perl >> $HOME/Logs/xmm_copy_cxo_data_bu.cron1
+#2,12,22,32,42,52 * * * *                  cd /data/mta/space_weather/XMM ;           ./get_data              > $HOME/Logs/xmm_get_bu.cron1
+
+mta @ r2d2-v
+
+3,8,13,18,23,28,33,38,43,48,53,58 * * * * cp /stage/xmmops_ftp/radmon_02h.dat /data/mta/space_weather/XMM/radmon_02h_curr.dat
+0,15,30,45 * * * *                        cd /data/mta_www/MIRROR/OPS/GOES/Plot_r2d2/I4/;   get_go.pl
+2,17,32,47 * * * *                        cd /data/mta_www/MIRROR/OPS/GOES/Plot_r2d2/Main/; get_go.pl
+0,10,20,30,40,50 * * * *                  cd /data/mta/space_weather/XMM ;           perl copy_cxo_data.perl >> $HOME/Logs/xmm_copy_cxo_data_bu.cron1
+2,12,22,32,42,52 * * * *                  cd /data/mta/space_weather/XMM ;           ./get_data              > $HOME/Logs/xmm_get_bu.cron1
+
